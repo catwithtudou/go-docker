@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c409521-f8e6-48b3-b9e8-002b17ec8f75" name="Default Changelist" comment="feather(docker):update the gocker">
+    <list default="true" id="4c409521-f8e6-48b3-b9e8-002b17ec8f75" name="Default Changelist" comment="test(ldflags):update the git info and go version">
+      <change afterPath="$PROJECT_DIR$/container/workspace.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/cgroup.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/cgroup.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,10 +100,22 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feather(docker):update the gocker" />
-    <option name="LAST_COMMIT_MESSAGE" value="feather(docker):update the gocker" />
+    <MESSAGE value="test(ldflags):update the git info and go version" />
+    <option name="LAST_COMMIT_MESSAGE" value="test(ldflags):update the git info and go version" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -119,10 +148,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="76" width="814" height="729" key="#意图/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598873967519" />
-    <state x="418" y="0" key="CommitChangelistDialog2" timestamp="1598880576861">
+    <state x="418" y="0" key="CommitChangelistDialog2" timestamp="1598881437569">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="418" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598880576861" />
+    <state x="418" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598881437569" />
     <state x="676" y="278" key="EnvironmentVariablesDialog" timestamp="1598872924013">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -155,10 +184,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="54" y="38" width="1477" height="710" key="SettingsEditor/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598879985301" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1598880264222">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1598881522279">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598880264222" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598881522279" />
     <state x="590" y="327" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598880251437">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
