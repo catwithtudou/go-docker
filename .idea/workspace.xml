@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c409521-f8e6-48b3-b9e8-002b17ec8f75" name="Default Changelist" comment="feather(docker):update the gocker">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cgroups/manager.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cgroups/subsystem/cpu.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cgroups/subsystem/cpuset.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cgroups/subsystem/memory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cgroups/subsystem/subsystem.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cgroups/subsystem/util.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cgroups/subsystem/util_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/command.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/container/init.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/container/process.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-docker" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cgroup.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/cgroup.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker" beforeDir="false" afterPath="$PROJECT_DIR$/example/docker" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/namespace.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/namespace.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/cgroup.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/cgroup.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,10 +119,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="76" width="814" height="729" key="#意图/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598873967519" />
-    <state x="418" y="0" key="CommitChangelistDialog2" timestamp="1598880335467">
+    <state x="418" y="0" key="CommitChangelistDialog2" timestamp="1598880576861">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="418" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598880335467" />
+    <state x="418" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598880576861" />
     <state x="676" y="278" key="EnvironmentVariablesDialog" timestamp="1598872924013">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

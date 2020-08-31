@@ -15,7 +15,7 @@ import (
  *@Date 2020/8/31
  **/
 
-const(
+const (
 	//挂载memory subsystem的hierarchy的位置
 	cGroupMemoryHierarchyMount = "/sys/fs/cgroup/memory"
 	//通过访问/proc/self/目录来获取自己的系统信息
@@ -27,28 +27,27 @@ const(
 	limitMemory = "100m"
 )
 
+func main() {
 
-func main(){
-
-	if os.Args[0] == procSelfExe{
+	if os.Args[0] == procSelfExe {
 		//容器进程
-		containerPid:=syscall.Getpid()
+		containerPid := syscall.Getpid()
 
-		fmt.Printf("current pid %d \n",containerPid)
+		fmt.Printf("current pid %d \n", containerPid)
 
-		cmd := exec.Command("sh","-c","stress --vm-bytes 200m --vm-keep -m 1")
+		cmd := exec.Command("sh", "-c", "stress --vm-bytes 200m --vm-keep -m 1")
 		cmd.SysProcAttr = &syscall.SysProcAttr{}
 		cmd.Stdin = os.Stdin
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
-		if err:=cmd.Run();err!=nil{
+		if err := cmd.Run(); err != nil {
 			panic(err)
 		}
 	}
 
-	cmd:=exec.Command(procSelfExe)
+	cmd := exec.Command(procSelfExe)
 	//限制NameSpace资源
-	cmd.SysProcAttr=&syscall.SysProcAttr{Cloneflags: syscall.CLONE_NEWUTS | syscall.CLONE_NEWPID | syscall.CLONE_NEWNS}
+	cmd.SysProcAttr = &syscall.SysProcAttr{Cloneflags: syscall.CLONE_NEWUTS | syscall.CLONE_NEWPID | syscall.CLONE_NEWNS}
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
@@ -58,17 +57,17 @@ func main(){
 	}
 
 	//获取fork的进程映射在外部命名空间的pid
-	processPid:=cmd.Process.Pid
-	fmt.Printf("process pid : %+v",processPid)
+	processPid := cmd.Process.Pid
+	fmt.Printf("process pid : %+v", processPid)
 
 	//创建子cGroup
-	childCGroup:= path.Join(cGroupMemoryHierarchyMount,memoryCGroup)
-	if err:=os.Mkdir(childCGroup,0755);err!=nil{
+	childCGroup := path.Join(cGroupMemoryHierarchyMount, memoryCGroup)
+	if err := os.Mkdir(childCGroup, 0755); err != nil {
 		panic(err)
 	}
 
 	//将容器进程PID放到子cGroup中
-	if err:= ioutil.WriteFile(path.Join(childCGroup,"tasks"),[]byte(strconv.Itoa(processPid)),0644);err!=nil{
+	if err := ioutil.WriteFile(path.Join(childCGroup, "tasks"), []byte(strconv.Itoa(processPid)), 0644); err != nil {
 		panic(err)
 	}
 
@@ -77,8 +76,8 @@ func main(){
 		panic(err)
 	}
 
-	_,err=cmd.Process.Wait()
-	if err!=nil{
+	_, err = cmd.Process.Wait()
+	if err != nil {
 		panic(err)
 	}
 
