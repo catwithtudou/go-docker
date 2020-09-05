@@ -35,7 +35,7 @@ func main() {
 	app.Usage = usage
 
 	//定义运行命令
-	app.Commands = []cli.Command{RunCommand, InitCommand}
+	app.Commands = []cli.Command{RunCommand, InitCommand,LogCommand,ListCommand}
 
 	app.Before = func(context *cli.Context) error {
 		logrus.SetFormatter(&logrus.JSONFormatter{})

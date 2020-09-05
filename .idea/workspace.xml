@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c409521-f8e6-48b3-b9e8-002b17ec8f75" name="Default Changelist" comment="feather(workspace):add the gocker workspace">
-      <change afterPath="$PROJECT_DIR$/config/common.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/container/log.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/container/info.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/command.go" beforeDir="false" afterPath="$PROJECT_DIR$/command.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/container/process.go" beforeDir="false" afterPath="$PROJECT_DIR$/container/process.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/container/workspace.go" beforeDir="false" afterPath="$PROJECT_DIR$/container/workspace.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,9 +198,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="468" y="153" width="599" height="528" key="find.popup/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598876423442" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1598870884962">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1599274908891">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598870884962" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1599274908891" />
   </component>
 </project>

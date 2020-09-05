@@ -34,6 +34,30 @@ var RunCommand = cli.Command{
 			Name:  "cs",
 			Usage: "cpu set limit",
 		},
+		cli.StringFlag{
+			Name:  "net",
+			Usage: "container network",
+		},
+		cli.StringFlag{
+			Name:  "v",
+			Usage: "docker volume",
+		},
+		cli.BoolFlag{
+			Name:  "d",
+			Usage: "detach container",
+		},
+		cli.StringFlag{
+			Name:  "name",
+			Usage: "container name",
+		},
+		cli.StringSliceFlag{
+			Name:  "e",
+			Usage: "docker env",
+		},
+		cli.StringSliceFlag{
+			Name:  "p",
+			Usage: "port mapping",
+		},
 	},
 	Action: func(context *cli.Context) error {
 		if len(context.Args()) < 1 {
@@ -56,8 +80,23 @@ var RunCommand = cli.Command{
 		for _, arg := range context.Args() {
 			cmdArray = append(cmdArray, arg)
 		}
+
+		detach := context.Bool("d")
+
+		if tty && detach {
+			return fmt.Errorf("ti and d paramter can not both provided")
+		}
+
+		containerName := context.String("name")
+		volume := context.String("v")
+		net := context.String("net")
+		// 要运行的镜像名
+		imageName := context.Args().Get(0)
+		envs := context.StringSlice("e")
+		ports := context.StringSlice("p")
+
 		//启动命令
-		Run(cmdArray, tty, res)
+		Run(cmdArray, tty, res,containerName,imageName,volume,net,envs,ports)
 		return nil
 	},
 }
@@ -82,6 +121,15 @@ var LogCommand = cli.Command{
 		}
 		containerName := ctx.Args().Get(0)
 		container.LookContainerLog(containerName)
+		return nil
+	},
+}
+
+var ListCommand = cli.Command{
+	Name: "ps",
+	Usage: "list all container",
+	Action: func(ctx *cli.Context)error{
+		container.ListContainerInfo()
 		return nil
 	},
 }
