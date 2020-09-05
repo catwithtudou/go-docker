@@ -19,9 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c409521-f8e6-48b3-b9e8-002b17ec8f75" name="Default Changelist" comment="test(ldflags):update the git info and go version">
-      <change afterPath="$PROJECT_DIR$/container/workspace.go" afterDir="false" />
+    <list default="true" id="4c409521-f8e6-48b3-b9e8-002b17ec8f75" name="Default Changelist" comment="feather(workspace):add the gocker workspace">
+      <change afterPath="$PROJECT_DIR$/config/common.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/container/log.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/command.go" beforeDir="false" afterPath="$PROJECT_DIR$/command.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/container/process.go" beforeDir="false" afterPath="$PROJECT_DIR$/container/process.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/container/workspace.go" beforeDir="false" afterPath="$PROJECT_DIR$/container/workspace.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,12 +114,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feather(docker):update the gocker" />
     <MESSAGE value="test(ldflags):update the git info and go version" />
-    <option name="LAST_COMMIT_MESSAGE" value="test(ldflags):update the git info and go version" />
+    <MESSAGE value="feather(workspace):add the gocker workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="feather(workspace):add the gocker workspace" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -148,10 +154,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="76" width="814" height="729" key="#意图/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598873967519" />
-    <state x="418" y="0" key="CommitChangelistDialog2" timestamp="1598881437569">
+    <state x="418" y="0" key="CommitChangelistDialog2" timestamp="1598883552640">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="418" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598881437569" />
+    <state x="418" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598883552640" />
     <state x="676" y="278" key="EnvironmentVariablesDialog" timestamp="1598872924013">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -160,22 +166,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="605" y="318" key="Github.CreateGistDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598880239381" />
-    <state width="1493" height="211" key="GridCell.Tab.0.bottom" timestamp="1598879706401">
+    <state width="1493" height="211" key="GridCell.Tab.0.bottom" timestamp="1598883784831">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598879706401" />
-    <state width="1493" height="211" key="GridCell.Tab.0.center" timestamp="1598879706401">
+    <state width="1493" height="211" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598883784831" />
+    <state width="1493" height="211" key="GridCell.Tab.0.center" timestamp="1598883784831">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598879706401" />
-    <state width="1493" height="211" key="GridCell.Tab.0.left" timestamp="1598879706401">
+    <state width="1493" height="211" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598883784831" />
+    <state width="1493" height="211" key="GridCell.Tab.0.left" timestamp="1598883784831">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598879706401" />
-    <state width="1493" height="211" key="GridCell.Tab.0.right" timestamp="1598879706401">
+    <state width="1493" height="211" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598883784831" />
+    <state width="1493" height="211" key="GridCell.Tab.0.right" timestamp="1598883784831">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598879706401" />
+    <state width="1493" height="211" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598883784831" />
     <state x="349" y="152" key="IDE.errors.dialog" timestamp="1598879848106">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -184,10 +190,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="54" y="38" width="1477" height="710" key="SettingsEditor/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598879985301" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1598881522279">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1598883650599">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598881522279" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1598883650599" />
     <state x="590" y="327" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598880251437">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

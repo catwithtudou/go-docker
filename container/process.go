@@ -1,8 +1,11 @@
 package container
 
 import (
+	"github.com/sirupsen/logrus"
+	"go-docker/config"
 	"os"
 	"os/exec"
+	"path"
 	"syscall"
 )
 
@@ -18,7 +21,7 @@ const (
 )
 
 //创建一个被namespace隔离的进程command
-func NewParentProcess(tty bool) (*exec.Cmd, *os.File) {
+func NewParentProcess(tty bool,containerName, imageName,volume string, envs []string) (*exec.Cmd, *os.File) {
 	//调用syscall包的Pipe()函数
 	//获取读和写阻塞管道
 	readPipe, writePipe, _ := os.Pipe()
@@ -35,9 +38,36 @@ func NewParentProcess(tty bool) (*exec.Cmd, *os.File) {
 		cmd.Stdin = os.Stdin
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
+	}else{
+		logDir := path.Join(config.DefaultContainerInfoPath,containerName)
+		if _,err := os.Stat(logDir);err!=nil && os.IsNotExist(err){
+			err:=os.MkdirAll(logDir,os.ModePerm)
+			if err!=nil{
+				logrus.Errorf("failed to mkdir log file;err: %v",err)
+			}
+		}
+
+		logFileName := path.Join(logDir,config.ContainerLogFileName)
+		file,err := os.Create(logFileName)
+		if err!=nil{
+			logrus.Errorf("failed to crate log file;err: %v",err)
+		}
+		cmd.Stdout = file
 	}
+
+
 	cmd.ExtraFiles = []*os.File{
 		readPipe, //读管道
 	}
+
+	//设置环境变量
+	cmd.Env = append(os.Environ(),envs...)
+	err:=NewWorkSpace(volume,containerName,imageName)
+	if err!=nil{
+		logrus.Errorf("failed to create work space,err: %v",err)
+	}
+
+	cmd.Dir = path.Join(config.RootPath,config.MntPath,containerName)
+
 	return cmd, writePipe
 }
